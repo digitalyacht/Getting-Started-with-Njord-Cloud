@@ -4,7 +4,9 @@ The Njord Cloud is built on Viam Cloud Technology and allows developers to acces
 
 ## Pre-requisites
 
-Create a `.env` file with the following content and add the appropriate values for your device. The easiest way to get the values is through app.viam.com:
+Creat a new folder in which the NjordLink SDK will be stored. Download a ZIP file of this repository and unzip it in the new NjordLink SDK folder.
+
+In the same folder, create an `.env` file with the following content and add the appropriate values for your device. The easiest way to get the values is through app.viam.com:
 
 ```
 VITE_ORG_ID=...
@@ -12,6 +14,10 @@ VITE_HOST=...
 VITE_API_KEY_ID=...
 VITE_API_KEY_SECRET=...
 ```
+
+The VITE_ORG_ID is the Organisation ID which you can get in the Settings page of that organisation.
+
+The VITE_HOST can be copied from the Device's CONNECT page, as can the two API KEYs if you click on API KEYS option.
 
 Install the required packages:
 
