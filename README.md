@@ -1,6 +1,6 @@
 # Njord Cloud SDK Quickstart
 
-The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's real-time and historical NMEA 2000 data, stored in the Njord Cloud.
+The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's real-time and historical NMEA 2000 data, stored in the Njord Cloud. You will need to have purchased, installed and configured a NjordLINK device before you can proceed, so that you have a valid Viam account and a device that is sending data to the cloud.
 
 ## Pre-requisites
 
