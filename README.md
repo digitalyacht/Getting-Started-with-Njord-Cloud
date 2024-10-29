@@ -1,6 +1,6 @@
-# Viam SDK Quickstart
+# Njord Cloud SDK Quickstart
 
-This example demonstrates how to connect to the Viam app and make calls to it.
+The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's real-time and historical NMEA 2000 data, stored in the Njord Cloud.
 
 ## Prerequisits
 
