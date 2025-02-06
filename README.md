@@ -1,28 +1,21 @@
-# Njord Cloud SDK Quickstart
+# Njord Cloud Developers Guide
 
-The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's real-time and historical NMEA 2000 data, stored in the Njord Cloud. You will need to have purchased, installed and configured a NjordLINK device before you can proceed, so that you have a valid Viam account and a device that is sending data to the cloud.
+The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's real-time and historical NMEA 2000 data, stored in the Njord Cloud. Built on Viam technology, NjordLink devices can be easily connected to a boat's NMEA 2000 and once configured will securely connect to the Viam Cloud servers, storing NMEA 2000 data for mobile and web apps to access.
 
-## Pre-requisites
+To evaluate the service, you will need to first register a free account on the [Viam Cloud](https://app.viam.com/robots) and then request access to the DY-Demo boat, by submitting a Developer Request form at  Please note that you must submit the same email address as you used to register for your Viam Account.
 
-Creat a new folder in which the NjordLink SDK will be stored. Download a ZIP file of this repository and unzip it in the new NjordLink SDK folder.
+To use the service with real devices and data, you will need to purchase one of the brand new NjordLink+ devices that are built on a RPi5. They locally decode the NMEA 2000 and securely send JSON data to the cloud. 
 
-In the same folder, create an `.env` file with the following content and add the appropriate values for your device. The easiest way to get the values is through app.viam.com:
+Please note that the original NjordLink (which is built on an ESP32) transmits RAW NMEA 2000 data and requires a developer to have knowledge of NMEA 2000 data (Appendix B) to query and display the data. We are working on a major update for NjordLink that will allow it to use the same JSON format as the Plus units and have one data format for all devices.
 
-```
-VITE_ORG_ID=...
-VITE_HOST=...
-VITE_API_KEY_ID=...
-VITE_API_KEY_SECRET=...
-```
+## Programming Language Options
 
-The VITE_ORG_ID is the Organisation ID which you can get in the Settings page of that organisation.
+Currently we have two example applications; one written in Python and one written in Type Script (see folders above).
 
-The VITE_HOST can be copied from the Device's CONNECT page, as can the two API KEYs if you click on API KEYS option.
+By default, the Type Script application uses a MongoDB query to display the last five PGNs received, but working code is included for a SQL query, just commented out in the main.ts file. 
 
-Install the required packages:
+The Python application uses MongoDB, which is installed along with other dependencies when you install the Viam libraries.
 
-`npm install`
+Please follow the instructions in the relevant ReadMe.
 
-## Usage
-
-Run `npm run dev` and visit `localhost:5173` in a browser.
+[Early first image of NjordLink+](https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/main/NjordLink+_First_Image.jpg)
