@@ -6,7 +6,7 @@ To evaluate the service, you will need to first register a free account on the [
 
 To use the service with real devices and data, you will need to purchase one of the brand new NjordLink+ devices that are built on a RPi5. They locally decode the NMEA 2000 and securely send JSON data to the cloud. 
 
-Please note that the original NjordLink (which is built on an ESP32) transmits RAW NMEA 2000 data and requires a developer to have knowledge of NMEA 2000 data (Appendix B) to query and display the data. We are working on a major update for NjordLink that will allow it to use the same JSON format as the Plus units and have one data format for all devices.
+Please note that the original NjordLink (which is built on an ESP32) transmits RAW NMEA 2000 data and requires a developer to have knowledge of NMEA 2000 data (Appendix B) to query and display the data. We are working on a major update for NjordLink that will allow it to use the same JSON format as the Plus units and have one data format for all devices. If you wish to start development now, we strongly recommend that you develop for NjordLink+ and when NjordLink is updated your code will work with both devices. 
 
 ## Programming Language Options
 
