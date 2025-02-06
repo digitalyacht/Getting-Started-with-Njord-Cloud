@@ -16,7 +16,7 @@ nvm use 22
 
 From within the project folder run `npm install`
 
-Create a `.env` file in the project folder with the following content (replace the variable values with your credentials!):
+Create a `.env` file in the project folder with the following content (replace the Organisation and API keys with the DY-Demo or your own Viam Account credentials):
 
 ```
 VITE_ORG_ID="<ORG-ID>"
@@ -26,8 +26,15 @@ VITE_API_KEY_SECRET="<API-KEY>"
 
 ## Usage
 
-Run `npm run dev` and visit `localhost:5173` in a browser. Press the button to execute the logic defined in `src/main.ts`.
+Run `npm run dev` 
+
+[VITE Output](https://)
+
+and visit `localhost:5173` in a browser. Press the button to execute the logic defined in `src/main.ts`.
+
+[Type Script Output](https://)
 
 ## Code Modifications
 
 Edit `src/main.ts` to change the logic being run. Edit `index.html` to change the layout of the app.
+
