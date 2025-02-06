@@ -18,4 +18,4 @@ The Python application uses MongoDB, which is installed along with other depende
 
 Please follow the instructions in the relevant ReadMe.
 
-[Early first image of NjordLink+](images/NjordLinkPlus_First_Image.jpg)
+[Early first image of NjordLink+](https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/f37309d32e1726e80125bc0e66f49cd49d275294/images/NjordLinkPlus_First_Image.jpg)
