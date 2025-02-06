@@ -28,11 +28,11 @@ VITE_API_KEY_SECRET="<API-KEY>"
 
 Run `npm run dev` 
 
-[VITE Output](https://)
+[VITE Output](https://raw.githubusercontent.com/digitalyacht/Getting-Started-with-Njord-Cloud/refs/heads/main/images/VITE_Output.png)
 
 and visit `localhost:5173` in a browser. Press the button to execute the logic defined in `src/main.ts`.
 
-[Type Script Output](https://)
+[Type Script Output](https://raw.githubusercontent.com/digitalyacht/Getting-Started-with-Njord-Cloud/refs/heads/main/images/TS_Output.png)
 
 ## Code Modifications
 

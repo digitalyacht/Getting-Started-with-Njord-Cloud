@@ -20,4 +20,4 @@ Edit the main Python_MQL-Example.py file and change the Organisation ID, Machine
 
 Run `python3 Python_MQL-Example.py` and you should see the JSON contents of the last 5 PGNs scroll down the screen.
 
-[Python output](https://]
+[Python output](https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/main/images/Python_Output.png]
