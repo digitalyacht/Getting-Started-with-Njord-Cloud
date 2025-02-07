@@ -17,5 +17,6 @@ By default, the Type Script application uses a MongoDB query to display the last
 The Python application uses MongoDB, which is installed along with other dependencies when you install the Viam libraries.
 
 Please follow the instructions in the relevant ReadMe.
-
-[Early first image of NjordLink+](https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/f37309d32e1726e80125bc0e66f49cd49d275294/images/NjordLinkPlus_First_Image.jpg)
+<br>
+<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/master/Images/NjordLinkPlus_First_Image.jpg" width=70%>
+<br>
