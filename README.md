@@ -18,5 +18,5 @@ The Python application uses MongoDB, which is installed along with other depende
 
 Please follow the instructions in the relevant ReadMe.
 <br>
-<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/master/images/NjordLinkPlus_First_Image.jpg" width=70%>
+<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/e8b6255527cd40631859b267904b221e4d97f8f1/images/NjordLinkPlus_First_Image.jpg" width=70%>
 <br>
