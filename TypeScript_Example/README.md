@@ -1,22 +1,26 @@
 # Viam TypeScript SDK MQL/SQL Querying Quickstart
 
-This example demonstrates how to connect to the Viam app and make calls to it.
+This example demonstrates how to connect to the Viam cloud and query historic data using MQL or SQL.
 
 ## Prerequisits
 
-Install [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+You need Node.js to be installed!
+We recommend using the node version manager [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) however feel free to user your own preference.
 
-Then install node/npm:
+Using nvm you can then install the required node/npm version:
 
 ```
 nvm use 22
 ```
 
-## Setup
+## Install Dependencies
 
-From within the project folder run `npm install`
+From within the project folder run `npm install`.
 
-Create a `.env` file in the project folder with the following content (replace the Organisation and API keys with the DY-Demo or your own Viam Account credentials):
+## Create `.env` file
+
+The `.env`file is used to store and load your credentials for accessing the data via the script.
+Create a file with the name `.env` and add the following content including your personal credentials:
 
 ```
 VITE_ORG_ID="<ORG-ID>"
@@ -26,7 +30,7 @@ VITE_API_KEY_SECRET="<API-KEY>"
 
 ## Usage
 
-Run `npm run dev` 
+Run `npm run dev`
 
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/5d50a3e0b195bcee5ec81c3c6494d43e5bdca88a/images/VITE_Output.png" width=70%>
@@ -40,5 +44,4 @@ and visit `localhost:5173` in a browser. Press the button to execute the logic d
 
 ## Code Modifications
 
-Edit `src/main.ts` to change the logic being run. Edit `index.html` to change the layout of the app.
-
+Edit `src/main.ts` to change the logic/queries being run. Edit `index.html` to change the layout of the app.
