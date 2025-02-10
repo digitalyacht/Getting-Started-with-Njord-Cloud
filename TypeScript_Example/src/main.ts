@@ -1,5 +1,4 @@
 import * as VIAM from "@viamrobotics/sdk";
-import { BSON } from "bsonfy";
 
 const ORG_ID = import.meta.env.VITE_ORG_ID;
 const API_KEY_ID = import.meta.env.VITE_API_KEY_ID;
@@ -27,25 +26,17 @@ async function run(client: VIAM.ViamClient) {
     const textElement = <HTMLParagraphElement>document.getElementById("text");
     textElement.innerHTML = "waiting for data...";
 
-    // SQL Query
+    // MQL Query
+    const query = [{ $limit: 2 }];
+    const dataList = await client.dataClient.tabularDataByMQL(ORG_ID, query);
+
+    // SQL Query (uncomment to use)
     /*
     const dataList = await client.dataClient.tabularDataBySQL(
       ORG_ID,
-      "select * from readings limit 5"
+      "select * from readings limit 2"
     );
     */
-
-    // MQL Query
-    const jsonQuery = [
-      {
-        $limit: 5,
-      },
-    ];
-    const bsonQuery = jsonQuery.map((stage) => BSON.serialize(stage));
-    const dataList = await client.dataClient.tabularDataByMQL(
-      ORG_ID,
-      bsonQuery
-    );
 
     // Display the data
     textElement.innerHTML = JSON.stringify(dataList, null, 2);
