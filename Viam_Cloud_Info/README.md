@@ -11,5 +11,5 @@ Alternatively, you can play with our demo NjordLink+ device that is on a simulat
 When you login to the Viam Cloud you will see 
 
 <div align="center">
-<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/e8b6255527cd40631859b267904b221e4d97f8f1/images/NjordLinkPlus_First_Image.jpg" width=70%>
+<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/eb34853d4a04226041400552845ffd01d663c74b/images/DYDemo_dashboard.png" width=70%>
 </div>
