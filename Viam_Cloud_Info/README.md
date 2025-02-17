@@ -10,7 +10,7 @@ Alternatively, you can play with our demo NjordLink+ device that is on a simulat
 
 Once you have [done the request form](https://support.digitalyacht.co.uk/developer-request/) and have been accepted into the demo, you will receive an email from VIAM:
 1. Click 'Join now' in said email,
-2. Click the DY-DEMO dropdown at the top right of your dowser window,
+2. Click the DY-DEMO dropdown at the top right of your browser window,
 3. Click 'Settings and invites' in the dropdown,
 4. Get the organisation id from the URL (it starts with `fa4` and ends with `737`),
 5. Get the Key and Secret from the table under the 'API Keys' sub-heading,
