@@ -8,7 +8,7 @@ Alternatively, you can play with our demo NjordLink+ device that is on a simulat
 
 ## How to Find Your API Keys
 
-Once you have [done the request form](https://support.digitalyacht.co.uk/developer-request/) and have been accepted into the demo, you will receive an email to VIAM:
+Once you have [done the request form](https://support.digitalyacht.co.uk/developer-request/) and have been accepted into the demo, you will receive an email from VIAM:
 1. Click 'Join now' in said email,
 2. Click the DY-DEMO dropdown at the top right of your dowser window,
 3. Click 'Settings and invites' in the dropdown,
