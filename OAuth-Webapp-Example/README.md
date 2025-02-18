@@ -1,6 +1,6 @@
 # Viam Svelte OAuth Web Application Starter Kit
 
-This basic Svelte web application is supposed to help you quickly build a simple web application, allowing you to use OAuth for identification and access to Viam machines and cloud APIs.
+This basic Svelte web application is will help you quickly build a simple web application, using OAuth for identification and access to Digital Yacht's NjordLink devices and cloud APIs.
 
 Setting up OAuth with Viam is straightforward. It is assumed that you already have Viam account and a related organization setup!
 
