@@ -22,7 +22,6 @@ Once you have [done the request form](https://support.digitalyacht.co.uk/develop
 
 When you login to the Viam Cloud you will see a screen similar to the one below, showing either your NjordLink machine or the DY-Demo organisation's machines.
 
-<hr>
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/eb34853d4a04226041400552845ffd01d663c74b/images/DYDemo_dashboard.png" width=70%>
 </div>
