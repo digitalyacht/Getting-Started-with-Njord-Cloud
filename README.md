@@ -18,6 +18,10 @@ The Python application uses MongoDB, which is installed along with other depende
 
 Please follow the instructions in the relevant ReadMe.
 
+## OAuth White Label Login Example
+
+Also included in this guide, is an example [OAuth](https://en.wikipedia.org/wiki/OAuth) webapp that allows you to efficiently authenticate and connect to your Viam Cloud Organisation. Whether your app needs to talk to one boat or hundreds of boats, the OAuth solution makes implementing a secure webapp authentication process very easy. Using the example code, you will be able to create your own login page, with whatever branding and user instructions you need.
+   
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/e8b6255527cd40631859b267904b221e4d97f8f1/images/NjordLinkPlus_First_Image.jpg" width=70%>
 </div>
