@@ -20,26 +20,30 @@ Once you have [done the request form](https://support.digitalyacht.co.uk/develop
 
 ## The Viam Cloud Dashboard
 
-When you login to the Viam Cloud you will see a screen similar to the one below, showing either your NjordLink machine or the DY-Demo organisation's machines... 
+When you login to the Viam Cloud you will see a screen similar to the one below, showing either your NjordLink machine or the DY-Demo organisation's machines. Make sure you click the chip in the machine column (in this example `test`) as clicking a different chip will take you to a different part of the webapp.
 
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/eb34853d4a04226041400552845ffd01d663c74b/images/DYDemo_dashboard.png" width=70%>
 </div>
+***
 
 If you click on the machine you wish to look at, in this example Njord Wind, you will be taken to the Configuration page for that machine...
 
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/074997f87349d77d6b2c5aaa0ef55a838c2a71e6/images/DYDemo_NjordWind_Configure.png" width=70%>
 </div>
+***
 
 All of the configuration is pretty automatic and there is nothing that normally needs to be changed, so click on the Control tab and you will see what data the Njord Wind is transmitting...
 
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/074997f87349d77d6b2c5aaa0ef55a838c2a71e6/images/DYDemo_NjordWind_Control.png" width=70%>
 </div>
+***
 
 If you wish to remotely send a PGN on the Njord Wind's NMEA 2000 network, you can create a transmission in the Sender section. Create the PGN contents in the Input panel and then when you click the Execute button, you should see a positive "sent" : true message in the Output panel... 
 
 <div align="center">
 <img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/074997f87349d77d6b2c5aaa0ef55a838c2a71e6/images/DYDemo_NjordWind_Sender.png" width=70%>
 </div>
+***
