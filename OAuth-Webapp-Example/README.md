@@ -8,7 +8,12 @@ To get Viam OAuth Setup, follow the instructions in the next section.
 
 ## Setup Viam OAuth
 
-If you are familiar with Viam OAuth already you can directly configure and use the commands below. If you are new to Viam OAuth I recommend to follow the instructions here: [Viam OAuth](https://docs.viam.com/manage/manage/oauth/)
+If you are familiar with Viam OAuth already you can directly configure and use the commands below.
+
+1. Download and install the VIAM CLI tool [Viam OAuth](https://docs.viam.com/dev/tools/cli/)
+    * If you are using the windows CLI tool the .exe you have downloaded needs to be set up with environment path variables [Guide](https://www.thewindowsclub.com/how-to-add-edit-a-path-variable-in-windows)
+2. If you are new to Viam OAuth I recommend to follow the instructions here: [Viam OAuth](https://docs.viam.com/manage/manage/oauth/)
+
 
 ### Useful Viam OAuth CLI Commands
 
@@ -28,6 +33,7 @@ viam organization auth-service oauth-app create \
 ```
 
 > **Note:** Make sure to store the received credentials `Client ID` and `Client Secret` securely!
+* `--redirect-uris` ***MUST*** include the value for `PUBLIC_LOGIN_CALLBACK` in `.env` (plus other valid entries)
 
 Update Viam OAuth Application:
 
