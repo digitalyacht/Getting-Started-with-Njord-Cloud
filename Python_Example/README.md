@@ -28,5 +28,5 @@ API_KEY_SECRET="<YOUR-API-KEY>"
 Run `python njordlink_query.py` and you should see the JSON contents of the PGNs scroll down the screen.
 
 <div align="center">
-<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/555339a1d683f16e2a527a49c740fb514af84061/images/Python_Output.png" width=70%>
+<img src="/images/Python_Output.png" width=70%>
 </div>

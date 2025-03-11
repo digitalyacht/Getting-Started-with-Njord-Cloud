@@ -33,13 +33,13 @@ VITE_API_KEY_SECRET="<API-KEY>"
 Run `npm run dev`
 
 <div align="center">
-<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/5d50a3e0b195bcee5ec81c3c6494d43e5bdca88a/images/VITE_Output.png" width=70%>
+<img src="/images/VITE_Output.png" width=70%>
 </div>
 
 and visit `localhost:5173` in a browser. Press the button to execute the logic defined in `src/main.ts`.
 
 <div align="center">
-<img src="https://github.com/digitalyacht/Getting-Started-with-Njord-Cloud/blob/5d50a3e0b195bcee5ec81c3c6494d43e5bdca88a/images/TS_Output.png" width=70%>
+<img src="/images/TS_Output.png" width=70%>
 </div>
 
 ## Code Modifications
