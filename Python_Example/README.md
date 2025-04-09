@@ -45,5 +45,6 @@ To run this code on a windows device we need to use a virtualisation system like
 * run the application `docker run -it --rm --name <process_name_here> <build_name_here>`
 
 <div align="center">
-<img src="/images/python_docker_solution.png" width="70%">
+<img src="/images/python_docker_solution.png" width="70%"><br>
+output of the njordlink_doCommand.py file
 </div>
