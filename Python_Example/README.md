@@ -1,3 +1,5 @@
+
+
 # Viam Python SDK MQL/SQL Querying Quickstart
 
 This example demonstrates how to connect to the Viam cloud and query historic data using MQL or SQL.
@@ -29,4 +31,19 @@ Run `python njordlink_query.py` and you should see the JSON contents of the PGNs
 
 <div align="center">
 <img src="/images/Python_Output.png" width=70%>
+</div>
+
+
+# Running in Windows
+
+To run this code on a windows device we need to use a virtualisation system like Docker.
+
+* [Docker Desktop Download](https://www.docker.com/products/docker-desktop/)
+* [Install Python via the Docker Hub](https://hub.docker.com/_/python/) (should be on the left of the Docker Desktop)
+* build the application (in powershell or cmd) `docker build -t <build_name_here>`
+    * make sure you're running powershell or cmd in the correct directory
+* run the application `docker run -it --rm --name <process_name_here> <build_name_here>`
+
+<div align="center">
+<img src="/images/python_docker_solution.png" width="70%">
 </div>
