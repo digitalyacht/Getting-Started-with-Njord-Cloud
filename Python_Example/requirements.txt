@@ -1,12 +1,15 @@
 dnspython==2.7.0
-googleapis-common-protos==1.66.0
+# googleapis-common-protos==1.66.0
+googleapis-common-protos
 grpclib==0.4.7
 h2==4.2.0
 hpack==4.1.0
 hyperframe==6.1.0
 multidict==6.1.0
-protobuf==5.29.1
+# protobuf==5.29.1
+protobuf
 pymongo==4.11
 python-dotenv==1.0.1
 typing_extensions==4.12.2
-viam-sdk==0.39.0
+# viam-sdk==0.39.0
+viam-sdk
