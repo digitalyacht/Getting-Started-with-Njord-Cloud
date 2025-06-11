@@ -1,19 +1,24 @@
 <script lang="ts">
-    // import { getApiCreds } from "$lib/code/Utils";
-    import { onMount } from "svelte";
+    import {
+        PUBLIC_API_KEY_ID,
+        PUBLIC_API_KEY_SECRET,
+        PUBLIC_MACHINE_ADDRESS,
+    } from "$env/static/public";
+    import { onDestroy, onMount } from "svelte";
     import * as VIAM from "@viamrobotics/sdk";
-    // import { defineRobotApiKey } from "$lib/code/viam/AuthDefs";
     import DigitalYachtViamDataCard from "$lib/components/DYViamCard.svelte";
-    import { PUBLIC_API_KEY_ID, PUBLIC_API_KEY_SECRET, PUBLIC_MACHINE_ADDRESS } from "$env/static/public";
 
-    const SigAddr = 'https://app.viam.com:443';
-
-    let allPgnReturnValue = $state();
+    let allPgnReturnValue: any = $state(null);
     let dataCardData: any[] = $state([]);
     let gettingData: boolean = $state(false);
+    let machine: VIAM.RobotClient;
 
     onMount(() => {
-        main();
+        getData();
+    });
+
+    onDestroy(() => {
+        if (machine) machine.disconnect();
     });
 
     function defineRobotApiKey(): VIAM.DialConf {
@@ -24,20 +29,30 @@
                 payload: PUBLIC_API_KEY_SECRET,
                 authEntity: PUBLIC_API_KEY_ID,
             },
-            signalingAddress: SigAddr,
-        }
+            signalingAddress: "https://app.viam.com:443",
+        };
     }
 
-    async function main() {
+    async function getData() {
         // ui
         gettingData = true;
-        // connection setup
-        const creds = defineRobotApiKey();
-        const machine = await VIAM.createRobotClient(creds);
+        dataCardData = [];
+        if (!machine) {
+            console.log("connecting to machine...");
+            machine = await VIAM.createRobotClient(defineRobotApiKey());
+        } else console.log("using existing connecting to machine.");
         // GET all-pgn
         const allPgnClient = new VIAM.SensorClient(machine, "all-pgn");
         allPgnReturnValue = await allPgnClient.getReadings();
-        dataCardData = Object.values((allPgnReturnValue as any));
+        if (allPgnReturnValue) {
+            const organisedReadingKeys = Object.keys(
+                allPgnReturnValue as any,
+            ).sort((a, b) => a.localeCompare(b));
+            organisedReadingKeys.forEach((key) => {
+                dataCardData.push(allPgnReturnValue[key]);
+            });
+            dataCardData = Object.values(allPgnReturnValue as any);
+        } else console.error("failed to get pgn data");
         // ui
         gettingData = false;
     }
@@ -45,14 +60,14 @@
 
 <div class="p-2">
     {#if dataCardData.length}
-        <button onclick={main} class="border rounded-md bg-gray-100 mr-1 px-1">
-            {#if gettingData}
-                Getting Data...
-            {:else}
-                Refresh Data
-            {/if}
+        <button
+            onclick={getData}
+            class="border rounded-md bg-gray-100 mr-1 px-1"
+        >
+            Refresh Data
         </button>
         <a id="grid" href="#json">Jump to JSON</a>
+        <!-- grid data -->
         <div
             class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4"
         >
@@ -65,16 +80,30 @@
             {/each}
         </div>
         <a id="json" href="#grid">Jump to Grid</a>
-        <pre class="bg-gray-100 p-2">{JSON.stringify(allPgnReturnValue, null, 2)}</pre>
-        <!-- <pre class="bg-gray-100 p-2">{JSON.stringify(dataCardData, null, 2)}</pre> -->
-    {:else}
+        <!-- JSON data -->
+        <pre class="bg-gray-100 p-2">{JSON.stringify(
+                allPgnReturnValue,
+                null,
+                2,
+            )}</pre>
+    {:else if gettingData}
+        <!-- getting data state -->
         <p>Getting Data...</p>
+    {:else}
+        <!-- error state -->
+        <p>Error getting data, may have recieved no data.</p>
+        <button
+            onclick={getData}
+            class="border rounded-md bg-gray-100 mr-1 px-1"
+        >
+            Retry
+        </button>
     {/if}
 </div>
 
 <style>
-	a {
-		color: blue;
-		text-decoration: underline;
-	}
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
 </style>

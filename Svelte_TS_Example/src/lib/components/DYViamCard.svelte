@@ -9,14 +9,14 @@
 
     const ignoredFields = [
         "description",
-        "pgn",
+        // "pgn",
         "pgnClean",
         "pgnRaw",
         "src",
         "timestamp",
     ];
 
-    let uniqueFields = $derived( Object.keys(value).filter((key) => {return !!! ignoredFields.includes(key)}) );
+    let uniqueFields = $derived( Object.keys(value).filter((key) => {return !!! ignoredFields.includes(key)}).sort((a, b) => a.localeCompare(b)) );
 
 </script>
 

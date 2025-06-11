@@ -28,20 +28,30 @@
 	<div class="pt-4 grid grid-cols-3 gap-4">
 		
 		<div class="flex items-center justify-center">
-			<!-- spacer -->
-		</div>
-
-		<div class="flex items-center justify-center">
 			<DemoButton
-				buttonText="health-check"
-				imageAlt="health-check"
-				buttonLink="/health-check"
+				buttonText="VIAM Connect Example"
+				imageAlt=" "
+				buttonLink="/connect-sanity-check"
 				textColor="text-stone-900"
 			/>
 		</div>
 		
 		<div class="flex items-center justify-center">
-			<!-- spacer -->
+			<DemoButton
+				buttonText="'all-pgn' data"
+				imageAlt=" "
+				buttonLink="/health-check"
+				textColor="text-stone-900"
+			/>
+		</div>
+
+		<div class="flex items-center justify-center">
+			<DemoButton
+				buttonText="Data query example"
+				imageAlt=" "
+				buttonLink="/data-query"
+				textColor="text-stone-900"
+			/>
 		</div>
 
 	</div>
