@@ -36,7 +36,8 @@ Run `python njordlink_query.py` and you should see the JSON contents of the PGNs
 
 # Running in Windows
 
-To run this code on a windows device we need to use a virtualisation system like Docker.
+While using a virtualisation isn't necessary, it may help when it comes to deploying your project. 
+In this project we have included a dockerfile so that Docker can be used.
 
 * [Docker Desktop Download](https://www.docker.com/products/docker-desktop/)
 * [Install Python via the Docker Hub](https://hub.docker.com/_/python/) (should be on the left of the Docker Desktop)
