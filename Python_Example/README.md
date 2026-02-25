@@ -2,7 +2,7 @@
 
 # Viam Python SDK MQL/SQL Querying Quickstart
 
-This example demonstrates how to connect to the Viam cloud and query historic data using MQL or SQL.
+These code snippets demonstrate how to connect to the Viam cloud get live data or historical data using SQL or MQL queries
 
 ## Create Virtual Environemt and Install Dependencies
 
