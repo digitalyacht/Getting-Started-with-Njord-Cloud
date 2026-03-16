@@ -45,3 +45,21 @@ If you wish to remotely send a PGN on the Njord Wind's NMEA 2000 network, you ca
 <div align="center">
 <img src="/images/DYDemo_NjordWind_Sender.png" width=70%>
 </div>
+
+### Understanding data capture
+
+Data capture and getting readings are two separate things. By default, data capture will be off for all sensors other than all-pgn, which will capture data once every 30 minutes.
+
+To enable data capture, You can click the '+ Add method' button in the 'Data capture' section of the module you want to capture data of.
+
+Next you want to set the method dropdown to 'readings' then set the frequency for how frequently you want to have data stored.
+
+Please note: that if you capture data too frequently you may incur charges.
+
+Finally make sure that the method is turned on and save your new device configs (CTRL + S); Data capture should now be enabled.
+
+### Erasing old data
+
+You are able to erase old data programmatically, you can refer to [The VIAM docs](https://docs.viam.com/dev/reference/apis/data-client/#deletetabulardata) on how to do this.
+
+Erasing old data can reduce any costs you'll incur.

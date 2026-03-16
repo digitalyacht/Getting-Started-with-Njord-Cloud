@@ -45,3 +45,7 @@ and visit `localhost:5173` in a browser. Press the button to execute the logic d
 ## Code Modifications
 
 Edit `src/main.ts` to change the logic/queries being run. Edit `index.html` to change the layout of the app.
+
+## Code Notes
+
+The default execution for the code provided will show you how to get historical data, but code for live data has been included too. Slight modification to code execution will be required for it to run.
