@@ -33,6 +33,9 @@ async function connectToLive(): Promise<VIAM.RobotClient> {
 const button = <HTMLButtonElement>document.getElementById("main-button");
 const textElement = <HTMLParagraphElement>document.getElementById("text");
 
+let client: VIAM.ViamClient;
+let machine: VIAM.RobotClient;
+
 // this code gets historical data from the VIAM cloud
 async function run(client: VIAM.ViamClient) {
 
@@ -69,6 +72,7 @@ async function getLiveData(robotClient: VIAM.RobotClient) { // note that this re
   textElement.innerHTML = "waiting for data...";
 
   try {
+    // other API that can be accessed are 'hwm-temps', 'hwm-memory', 'hwm-disk', 'nmea0183'
     const allPgnClient = new VIAM.SensorClient(robotClient, 'all-pgn');
     const allPgnValues = await allPgnClient.getReadings();
     textElement.innerHTML = JSON.stringify(allPgnValues, null, 2);
@@ -81,9 +85,8 @@ async function getLiveData(robotClient: VIAM.RobotClient) { // note that this re
   }
 }
 
+// commented out code would be needed for getting live data
 async function main() {
-  let client: VIAM.ViamClient;
-  // let machine: VIAM.RobotClient;
   try {
     button.textContent = "Connecting...";
     client = await connect();
@@ -102,5 +105,10 @@ async function main() {
   });
   button.disabled = false;
 }
+
+window.addEventListener('beforeunload', (e) => {
+  if(machine) machine.disconnect(); // make sure that we close connection with machines
+  return null;
+});
 
 main();
