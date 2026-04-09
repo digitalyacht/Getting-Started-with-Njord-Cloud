@@ -1,12 +1,12 @@
 # Njord Cloud Developers Guide
 
-The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's current and historical NMEA 2000 data, stored in the Njord Cloud. Digital Yacht's NjordLink devices can be easily connected to a boat's NMEA 2000 and once configured will securely connect to the Viam Cloud servers, storing NMEA 2000 data for mobile and web apps to remotely access.
+The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's current and historical NMEA 2000 data, stored in the Njord Cloud. ([Digital Yacht's NjordLink+ devices](https://digitalyacht.co.uk/product/njordlinkplus/)) can be easily connected to a boat's NMEA 2000 and once configured will securely connect to the Viam Cloud servers, storing NMEA 2000 data for mobile and web apps to remotely access.
 
 To evaluate the service, you will need to first register a free account on the [Viam Cloud](https://app.viam.com/robots) and then request access to the DY-Demo boat, by submitting a Developer Request form ([click here](https://support.digitalyacht.co.uk/developer-request/) ). Please note that you must submit the same email address as you used to register for your Viam Account.
 
-To use the service with real devices and data, you will need to purchase one of the brand new NjordLink+ devices that are built on a RPi5. They locally decode the NMEA 2000 and securely send JSON data to the cloud. 
+To use the service with real devices and data, you will need to purchase one of our NjordLink+ devices. They locally decode the NMEA 2000 and securely send JSON data to the cloud. With the addition of one of our NMEA to USB Adaptor cables, NjordLink+ devices can also send NMEA 0183 data to the cloud. 
 
-Please note that the original NjordLink (which is built on an ESP32) transmits RAW NMEA 2000 data and requires a developer to have knowledge of NMEA 2000 data (Appendix B) to query and display the data. We are working on a major update for NjordLink that will allow it to use the same JSON format as the Plus units and have one data format for all devices. If you wish to start development now, we strongly recommend that you develop for NjordLink+ and when NjordLink is updated your code will work with both devices. 
+Please note that the original NjordLink (based on ESP32) has been discontinued and replaced by the more powerful NjordLink+ units.  
 
 ## Programming Language Options
 
