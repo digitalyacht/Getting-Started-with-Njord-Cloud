@@ -1,0 +1,29 @@
+# Njord Cloud Developers Guide
+
+## Please note: Most of our examples are with Typescript, feel free to share code conversions.
+
+The Njord Cloud is built on Viam Cloud Technology and allows developers to access a boat's current and historical NMEA 2000 data, stored in the Njord Cloud. [Digital Yacht's NjordLink+ devices](https://digitalyacht.co.uk/product/njordlinkplus/) can be easily connected to a boat's NMEA 2000 and once configured will securely connect to the Viam Cloud servers, storing NMEA 2000 data for mobile and web apps to remotely access.
+
+To evaluate the service, you will need to first register a free account on the [Viam Cloud](https://app.viam.com/robots) and then request access to the DY-Demo boat, by submitting a Developer Request form ([click here](https://support.digitalyacht.co.uk/developer-request/) ). Please note that you must submit the same email address as you used to register for your Viam Account.
+
+To use the service with real devices and data, you will need to purchase one of our NjordLink+ devices. They locally decode the NMEA 2000 and securely send JSON data to the cloud. With the addition of one of our NMEA to USB Adaptor cables, NjordLink+ devices can also send NMEA 0183 data to the cloud. 
+
+Please note that the original NjordLink (based on ESP32) has been discontinued and replaced by the more powerful NjordLink+ units.  
+
+## Programming Language Options
+
+Currently we have two example applications; one written in Python and one written in Type Script (see folders above).
+
+By default, the Type Script application uses a MongoDB query to display the last five PGNs received, but working code is included for a SQL query, just commented out in the main.ts file. 
+
+The Python application uses MongoDB, which is installed along with other dependencies when you install the Viam libraries.
+
+Please follow the instructions in the relevant ReadMe.
+
+## OAuth White Label Login Example
+
+Also included in this guide, is an example [OAuth](https://en.wikipedia.org/wiki/OAuth) webapp that allows you to efficiently authenticate and connect to your Viam Cloud Organisation. Whether your app needs to talk to one boat or hundreds of boats, the OAuth solution makes implementing a secure webapp authentication process very easy. Using the example code, you will be able to create your own login page, with whatever branding and user instructions you need.
+   
+<div align="center">
+<img src="/images/NjordLinkPlus_First_Image.jpg" width=70%>
+</div>
