@@ -1,8 +1,8 @@
 # General Requirements
 
 Either peripherals or SSH knowledge
-* Peripherals: Keyboard, Mouse, Micro-HDMI compatible media cable,
-* SSH: Your device IP address and a terminal tool your comfortable with using,
+* Peripherals: Keyboard, Mouse, Micro-HDMI compatible media cable and monitor
+* SSH: Your device IP address and a terminal tool your comfortable with using
 
 Logging into your device:
 * username: viam
