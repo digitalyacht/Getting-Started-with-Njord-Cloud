@@ -29,7 +29,7 @@ For simplicity, I'd recommend running the commands before plugging in the device
 
 In this case we can see that I have connected a device and it can be accessed via `/dev/ttyUSB0`
 
-If you notice that a device has been (re-assigned / stops working) after your NjordLINK plus has been restarted then you may have to do this step again.
+If you notice that a device has been (re-assigned / stops working) after your NjordLINK plus has been restarted then you may have to do this step again & then reconfigure your device on VIAM.
 
 ## Changing Device Password
 
