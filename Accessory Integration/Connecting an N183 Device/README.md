@@ -32,19 +32,3 @@ You should then be able to see the readings in the GetReadings section of the pa
 <div align="center">
     <img src="../../images/accessory tutorials/n183_viam_2.jpg" width=70%>
 </div>
-
-List of suitable configs:
-```
-{
-  "src": "udp:20009"
-}
-
-{
-  "src": "net:3000"
-}
-
-{
-  "src": "serial:/dev/tttyUSB0"
-}
-
-```
