@@ -32,3 +32,19 @@ You should then be able to see the readings in the GetReadings section of the pa
 <div align="center">
     <img src="../../images/accessory tutorials/n183_viam_2.jpg" width=70%>
 </div>
+
+## Specifying a baud rate
+
+You are able to specify a baud rate by adding a colon then the rate in the config:
+
+```
+{
+   "reader": "serial:/dev/ttyUSB1:4800"
+}
+```
+
+Valid baud rates:
+* 4800
+* 38400
+* 115200
+* 230400
