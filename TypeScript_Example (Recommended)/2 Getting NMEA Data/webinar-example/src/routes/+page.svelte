@@ -18,6 +18,7 @@
 
     onMount(main); // runs our main function
 
+    // this is adapted from what you can get on VIAM so that it works cleanly with SvelteKit
     async function main() {
 
         // dev code to check that env vars have loaded
@@ -26,13 +27,11 @@
         // console.log(`auth entity: ${PUBLIC_MACHINE_AUTH_ENTITY}`)
 
         machine = await VIAM.createRobotClient({
-            host: PUBLIC_MACHINE_HOST,
+            host: PUBLIC_MACHINE_HOST, // see .env.example && env.ts
             credentials: {
                 type: "api-key",
-                /* Replace "<API-KEY>" (including brackets) with your machine's API key */
-                payload: PUBLIC_MACHINE_PAYLOAD,
-                /* Replace "<API-KEY-ID>" (including brackets) with your machine's API key ID */
-                authEntity: PUBLIC_MACHINE_AUTH_ENTITY,
+                payload: PUBLIC_MACHINE_PAYLOAD, // see .env.example && env.ts
+                authEntity: PUBLIC_MACHINE_AUTH_ENTITY, // see .env.example && env.ts
             },
             signalingAddress: "https://app.viam.com:443",
         });
@@ -134,10 +133,6 @@
         // console.log('firebase-push doCommand return value:', firebasePushReturnValue);
     };
 
-    main().catch((error: unknown) => {
-        console.error("encountered an error:", error);
-    });
-
     // this code includes the basic sorting, notice how the first refresh un-jumbles the data shown on the page
     async function getAllPgnData() {
         if (allPgnClient) {
@@ -166,6 +161,6 @@
         {JSON.stringify(allPgnData, null, 2)}
     </pre>
     {:else}
-        <p>getting data...</p>
+        <p class="text-center">Getting data...</p>
     {/if}
 </div>
