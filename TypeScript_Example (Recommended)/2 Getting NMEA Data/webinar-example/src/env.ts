@@ -1,13 +1,13 @@
 import { defineEnvVars } from '@sveltejs/kit/env';
 
 export const variables = defineEnvVars({
-	PUBLIC_MACHINE_HOST: {
-		public: true
+	MACHINE_HOST: {
+		public: true // in a production application you'll want to consider not having this public
 	},
-	PUBLIC_MACHINE_PAYLOAD: {
-		public: true
+	MACHINE_PAYLOAD: {
+		public: true // in a production application you'll want to consider not having this public
 	},
-	PUBLIC_MACHINE_AUTH_ENTITY: {
-		public: true
+	MACHINE_AUTH_ENTITY: {
+		public: true // in a production application you'll want to consider not having this public
 	},
 });

@@ -1,10 +1,6 @@
 <script lang="ts">
     import * as VIAM from "@viamrobotics/sdk";
-    import {
-        PUBLIC_MACHINE_HOST,
-        PUBLIC_MACHINE_PAYLOAD,
-        PUBLIC_MACHINE_AUTH_ENTITY,
-    } from "$app/env/public";
+    import { MACHINE_HOST, MACHINE_PAYLOAD, MACHINE_AUTH_ENTITY } from "$app/env/public"; // see .env.example && env.ts
     import { onDestroy, onMount } from "svelte";
 
     let allPgnClient: VIAM.SensorClient | undefined = $state();
@@ -12,32 +8,32 @@
     let machine: VIAM.Client | undefined = $state();
 
     // make sure to disconnect from the machine when appropriate
-    onDestroy(() => {
+    onDestroy(() => { // in this case we close the connection on page close
         machine?.disconnect();
     });
 
-    onMount(main); // runs our main function
+    onMount(main); // runs our main function on startup
 
     // this is adapted from what you can get on VIAM so that it works cleanly with SvelteKit
     async function main() {
 
         // dev code to check that env vars have loaded
-        // console.log(`host: ${PUBLIC_MACHINE_HOST}`)
-        // console.log(`payload: ${PUBLIC_MACHINE_PAYLOAD}`)
-        // console.log(`auth entity: ${PUBLIC_MACHINE_AUTH_ENTITY}`)
+        // console.log(`host: ${MACHINE_HOST}`)
+        // console.log(`payload: ${MACHINE_PAYLOAD}`)
+        // console.log(`auth entity: ${MACHINE_AUTH_ENTITY}`)
 
         machine = await VIAM.createRobotClient({
-            host: PUBLIC_MACHINE_HOST, // see .env.example && env.ts
+            host: MACHINE_HOST, // see .env.example && env.ts
             credentials: {
                 type: "api-key",
-                payload: PUBLIC_MACHINE_PAYLOAD, // see .env.example && env.ts
-                authEntity: PUBLIC_MACHINE_AUTH_ENTITY, // see .env.example && env.ts
+                payload: MACHINE_PAYLOAD, // see .env.example && env.ts
+                authEntity: MACHINE_AUTH_ENTITY, // see .env.example && env.ts
             },
             signalingAddress: "https://app.viam.com:443",
         });
 
         console.log("Resources:");
-        console.log(await machine.resourceNames()); // this is causing the warning 'console_log_state', this is fine for the demo
+        console.log(await machine.resourceNames());
 
         // Example
         const exampleClient = new VIAM.CameraClient(machine, "Example");
@@ -134,8 +130,9 @@
     };
 
     // this code includes the basic sorting, notice how the first refresh un-jumbles the data shown on the page
-    async function getAllPgnData() {
-        if (allPgnClient) {
+    async function getAllPgnData(doSort: boolean) {
+        if (allPgnClient && doSort) {
+
             const unsorted: any = await allPgnClient.getReadings();
             const sortedKeys = Object.keys(unsorted).sort();
             allPgnData = {};
@@ -148,19 +145,27 @@
                 });
                 allPgnData[key] = sortedData;
             });
-            console.log("Data updated!");
+            console.log(`Data updated @ ${new Date(Date.now()).toISOString()}`);
+
+        } else if (allPgnClient) {
+
+            allPgnData = await allPgnClient.getReadings();
+            console.log(`Data updated @ ${new Date(Date.now()).toISOString()}`);
+
         }
     }
 </script>
 
+<!-- basic UI for clarity -->
 <div>
-    {#if allPgnClient != undefined}
-        <button onclick={getAllPgnData}>Refresh Data</button>
-
-        <pre>
-        {JSON.stringify(allPgnData, null, 2)}
-    </pre>
-    {:else}
-        <p class="text-center">Getting data...</p>
-    {/if}
+    <h1>Check the web console for log outputs too</h1>
+    <div>
+        {#if allPgnClient != undefined}
+            <button onclick={() => getAllPgnData(true)}>Refresh Data With Sorting</button>
+            <button onclick={() => getAllPgnData(false)}>Refresh Data Without Sorting</button>
+            <pre>{JSON.stringify(allPgnData, null, 2)}</pre>
+        {:else}
+            <p>Getting data...</p>
+        {/if}
+    </div>
 </div>
