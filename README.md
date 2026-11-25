@@ -6,7 +6,13 @@ The Njord Cloud is built on Viam Cloud Technology and allows developers to acces
 
 To evaluate the service, you will need to first register a free account on the [Viam Cloud](https://app.viam.com/robots) and then request access to the DY-Demo boat, by submitting a Developer Request form ([click here](https://support.digitalyacht.co.uk/developer-request/) ). Please note that you must submit the same email address as you used to register for your Viam Account.
 
-To use the service with real devices and data, you will need to purchase one of our NjordLink+ devices. They locally decode the NMEA 2000 and securely send JSON data to the cloud. With the addition of one of our NMEA to USB Adaptor cables, NjordLink+ devices can also send NMEA 0183 data to the cloud. 
+To use the service with real devices and data, you will need to purchase one of our NjordLink+ devices. They locally decode the NMEA 2000 and securely send JSON data to the cloud. With the addition of one of our NMEA to USB Adaptor cables, NjordLink+ devices can also send NMEA 0183 data to the cloud. For larger vessels with multiple NMEA 2000 networks and/or J1939 networks, optional iKonvert USB gateways can be plugged in to the NjordLink+ USB ports.  
+
+For more Developer information about boat networks and getting started writing your own code, please click on the YouTube links below...
+
+[NjordLink+ Developer Guide to Boat Networks](https://youtu.be/wohfps9epXs)
+
+[NjordLink+ Developer Guide to Build your own Apps](https://youtu.be/-kdUnxxKBUk)
 
 Please note that the original NjordLink (based on ESP32) has been discontinued and replaced by the more powerful NjordLink+ units.  
 
